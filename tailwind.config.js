@@ -18,7 +18,21 @@ module.exports = {
       green: colors.green,
       blue: colors.blue
     },
-    extend: {},
+    extend: {
+      fontFamily : {
+        'montserrat' : ['Montserrat','sans-serif'],
+        'roboto-condensed' : ['Roboto Condensed','sans-serif']
+      },
+      keyframes : {
+        initialClub : {
+          '0%' : {backgroundColor : 'rgb(134, 130, 130)'},
+          '100%' : {backgroundColor : 'transparent'}
+        }
+      },
+      animation : {
+        initialClub : 'initialClub 1.5s ease forwards'
+      }
+    },
   },
   plugins: [],
 }

@@ -1,0 +1,26 @@
+@if (status) {
+  @if (whichTeam) {
+    <div class="p-3">
+      <h2 class="leading-9 text-base font-roboto-condensed animate-initialClub rounded">Choose your favorite club: </h2>
+    </div>
+    <app-national-team-list
+      [countries]="countries"
+      (searchCountry)="searchClub($event)"
+      (sendCountry)="selectCountry($event)"
+    ></app-national-team-list>
+  } @else {
+    <div class="p-2 rounded-full w-min hover:bg-gray-400 hover:cursor-pointer" (click)="back()">
+      <fa-icon [icon]="faAngleLeft"></fa-icon>
+    </div>
+    <app-club-team-list
+      [clubs]="clubs"
+      (sendClub)="selectClub($event)"
+    ></app-club-team-list>
+  }
+} @else {
+  <app-skeleton-selection-team></app-skeleton-selection-team>
+}
+
+<div class="p-3">
+  <button mat-stroked-button color="primary" (click)="hop()" type="button">Hop</button>
+</div>

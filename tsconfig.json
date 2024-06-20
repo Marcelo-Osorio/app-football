@@ -44,6 +44,15 @@
       ],
       "@welcome/*" : [
         "./src/app/welcome/*"
+      ],
+      "@assets/*" : [
+        "./src/assets/"
+      ],
+      "@material/*" : [
+        "./src/app/material/*"
+      ],
+      "@cdk/*" : [
+        "./src/app/cdk/*"
       ]
     },
   },

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { BackgroundComponent } from '@welcome/components/background/background.component';
-import { NationalTeamComponent } from '@welcome/components/national-team/national-team.component';
-import { ClubTeamComponent } from '@welcome/components/club-team/club-team.component';
+import { NationalTeamComponent } from '@welcome/pages/national-team/national-team.component';
+import { ClubTeamComponent } from '@welcome/pages/club-team/club-team.component';
 
 export const WELCOME_ROUTES: Routes = [
   {

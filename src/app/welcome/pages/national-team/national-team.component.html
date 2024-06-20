@@ -1,0 +1,16 @@
+@if (status) {
+  <h2 class="leading-9 text-base font-roboto-condensed">Choose your national team : </h2>
+  <app-national-team-list
+    [countries]="countries"
+    (searchCountry)="searchCountry($event)"
+    (sendCountry)="selectCountry($event)"
+    (back)="back()"
+    [isSearch]="isSearch"
+  ></app-national-team-list>
+} @else {
+  <app-skeleton-selection-team></app-skeleton-selection-team>
+}
+
+<div class="p-3">
+  <button mat-stroked-button color="primary" (click)="hop()" type="button">Hop</button>
+</div>

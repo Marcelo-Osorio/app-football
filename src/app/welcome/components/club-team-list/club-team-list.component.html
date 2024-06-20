@@ -1,0 +1,20 @@
+<cdk-virtual-scroll-viewport appendOnly itemSize="1" class="h-96">
+  <mat-list>
+    <div *cdkVirtualFor="let club of clubs">
+      @if (!club.team.national) {
+        <mat-list-item class="hover:bg-gray-400" (click)="selectClub(club)">
+          <p class="cursor-pointer hover:text-indigo-600 font-roboto-condensed">
+            <img [src]="club.team.logo" alt="flag" class="h-4 inline-block">
+            {{club.team.name}}
+          </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      }
+    </div>
+  </mat-list>
+  @if (clubs.length == 0) {
+    <div class="p-3">
+      <mat-error>club not found</mat-error>
+    </div>
+  }
+</cdk-virtual-scroll-viewport>

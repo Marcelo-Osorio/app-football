@@ -2,3 +2,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@layer utilities {
+  .bg-welcome {
+    background-image: url('./assets/images/football_field.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .form-equipment {
+    position: relative;
+    background:rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 21rem;
+  }
+
+  @media screen and (min-width:600px) {
+    .form-equipment {
+      max-width: 24rem;
+    }
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
